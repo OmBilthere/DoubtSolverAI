@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 function Header() {
   return (
     <header className="h-14 px-4 border-b border-gray-800 bg-[#0d0d0d] flex items-center justify-between">
