@@ -5,12 +5,11 @@ config({ path: './.env' });
 dotenv.config();
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
-console.log("Groq Key:", GROQ_API_KEY);
 
 export async function getAIAnswer(question) {
   try {
     const response = await axios.post(
-      `https://api.groq.com/openai/v1/chat/completions`, // Direct URL
+      `https://api.groq.com/openai/v1/chat/completions`, 
       {
         model: "llama-3.1-8b-instant",
         messages: [
